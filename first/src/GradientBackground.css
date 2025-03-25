@@ -1,0 +1,36 @@
+.gradient-background {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  
+  .gradient-animation {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      45deg,
+      #ff6b6b,
+      #4ecdc4,
+      #45b7d1,
+      #96c93d,
+      #ff9a9e,
+      #fad0c4
+    );
+    background-size: 400% 400%;
+    animation: gradientFlow 20s ease infinite;
+    z-index: -1;
+  }
+  
+  @keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .content {
+    position: relative;
+    z-index: 1;
+  }
